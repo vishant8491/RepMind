@@ -6,22 +6,18 @@ through a **conversational AI Assistant**, backed by a **LangGraph** agent using
 **Groq**-hosted LLM (`gemma2-9b-it`).
 
 
-## 📸 Screenshots
+## Screenshots
 
-### Home Page
-Displays all notices in a clean, responsive card layout with category, priority, publish date, and optional images.
+### Log HCP Interaction screen
+Structured form (left), AI Assistant chat (right), and interaction history below.
 
-![Home Page](./screenshots/home-page.png)
+![Log HCP Interaction screen](backend/screenshots/main-ui.png)
 
-### Create Notice
-A user-friendly form to create new notices by entering the title, description, category, priority, publish date, and optional image.
+### AI Assistant logging an interaction via chat
+The agent calls the relevant LangGraph tool (shown as a badge under each reply)
+based on what the rep types.
 
-![Create Notice](./screenshots/create-notice.png)
-
-### Notice List
-View, edit, and delete notices with real-time updates. Urgent notices are displayed first for better visibility.
-
-![Notice List](./screenshots/notice-list.png)
+![AI Assistant using LangGraph tools](backend/screenshots/chat-tools.png)
 
 ## Role of the LangGraph agent
 
