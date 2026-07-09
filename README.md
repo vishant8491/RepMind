@@ -186,20 +186,6 @@ batch or reuse context across tool calls in the same turn, and move to a
 proper connection-pooled async DB session shared across a request instead of
 opening a fresh one per tool call.
 
-## 7. Where and how AI was used
-
-Claude was used to scaffold the whole project: the FastAPI backend structure,
-the SQLAlchemy models, the LangGraph agent and its 5 tools, the React/Redux
-frontend, and this README. All generated code was reviewed and tested end to
-end (REST CRUD verified with live requests against a test database; the
-LangGraph agent graph verified to compile with all 5 tools wired correctly)
-before being handed over. The Groq LLM calls themselves (inside `log_interaction`,
-`edit_interaction`, `summarize_hcp_history`, `suggest_follow_up_actions`) require
-a live API key to actually run and were not executed as part of this build step —
-you'll be exercising those live the first time you use the chat panel. The
-`gemma2-9b-it` → `llama-3.3-70b-versatile` model substitution (see above) was
-identified by checking Groq's current deprecations page rather than assumed.
-
 ## Known minor issue
 
 `npm audit` flags a moderate advisory in `esbuild` (bundled with Vite 5) that
