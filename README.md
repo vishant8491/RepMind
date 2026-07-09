@@ -5,6 +5,20 @@ Healthcare Professional (HCP) interaction either through a **structured form** o
 through a **conversational AI Assistant**, backed by a **LangGraph** agent using a
 **Groq**-hosted LLM (`gemma2-9b-it`).
 
+
+## Screenshots
+
+### Log HCP Interaction screen
+Structured form (left), AI Assistant chat (right), and interaction history below.
+
+![Log HCP Interaction screen](backend/screenshots/main-ui.png)
+
+### AI Assistant logging an interaction via chat
+The agent calls the relevant LangGraph tool (shown as a badge under each reply)
+based on what the rep types.
+
+![AI Assistant using LangGraph tools](backend/screenshots/chat-tools.png)
+
 ## Role of the LangGraph agent
 
 The agent sits between the rep's natural-language input (typed into the "AI
